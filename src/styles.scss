@@ -1,0 +1,31 @@
+@import "@flaticon/flaticon-uicons/css/all/all.css";
+$primary: #fd7e14;
+$secondary: #1d648b;
+
+$theme-colors: (
+    "primary": $primary,
+    "secondary": $secondary,
+    "success": #198754,
+    "info": #0dcaf0,
+    "warning": #ffc107,
+    "danger": #dc3545,
+    "light": #f8f9fa,
+    "dark": #212529
+);
+
+@import "bootstrap/scss/bootstrap";
+
+body {
+    -webkit-font-smoothing: antialiased;
+}
+
+.btn-outline-primary {
+    color: $primary;
+    border-color: $primary;
+
+    &:hover {
+        color: #fff;
+        background-color: $primary;
+        border-color: $primary;
+    }
+}

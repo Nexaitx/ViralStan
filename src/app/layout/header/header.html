@@ -1,0 +1,84 @@
+<header id="site-header" class="main-header main-header-overlay position-fixed mb-5 sticky-header-noshadow is-not-stuck"
+    data-sticky-header="true" data-sticky-values-measured="true">
+    <div class="lqd-hide-onstuck spacer h-10"></div>
+    <div class="w-100 d-flex items-stretch justify-content-center px-10 md:hidden">
+        <div class="w-960 d-flex items-stretch justify-content-center py-10">
+            <div
+                class="w-100 statick d-flex align-items-center justify-content-between px-30 bg-white rounded-10 shadow-blue module-header-bottom">
+                <div class="module-logo d-flex navbar-brand-plain">
+                    <a class="navbar-brand d-flex p-0 relative" href="/" rel="home">
+                        <span class="navbar-brand-inner post-rel">
+                            <img loading="lazy" class="logo-default" src="assets/logo.png" alt="ViralStan Logo">
+                        </span>
+                    </a>
+                </div>
+
+                <div class="module-primary-nav flex mx-auto">
+                    <!-- Desktop / large: show inline nav -->
+                    <div class="d-none d-lg-flex" role="navigation" aria-hidden="true">
+                        <ul class="main-nav navbar-nav d-flex flex-row reset-ul lqd-menu-counter-right main-nav-hover-fill link-13 link-black link-medium"
+                            data-submenu-options="{&quot;toggleType&quot;: &quot;fade&quot;, &quot;handler&quot;: &quot;mouse-in-out&quot;}"
+                            data-localscroll="true"
+                            data-localscroll-options="{&quot;itemsSelector&quot;:&quot;&gt; li &gt; a&quot;, &quot;trackWindowScroll&quot;: true, &quot;includeParentAsOffset&quot;: true}">
+                            <li class="nav-item is-active">
+                                <a class="nav-link" href="#features">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#case-studies">Clients</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#why">Why ViralStan?</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#testimonial">Reviews</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#faq">FAQs</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <button class="btn btn-primary text-light rounded btn-sm">Chat Now</button>
+                </div>
+                <button type="button"
+                    class="navbar-toggler d-lg-none collapsed nav-trigger style-mobile d-flex relative align-items-center justify-end border-none bg-transparent p-0 ms-3"
+                    data-bs-toggle="offcanvas" data-bs-target="#primaryOffcanvas" aria-controls="primaryOffcanvas"
+                    aria-expanded="false">
+                    <i class="fi fi-br-bars-sort"></i>
+                </button>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Removed separate mobile header block: main header now handles collapsible nav on small devices -->
+    <!-- Offcanvas for mobile menu -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="primaryOffcanvas" aria-labelledby="primaryOffcanvasLabel">
+        <div class="offcanvas-header py-0 ms-auto">
+            <i class="fi fi-rr-cross pt-2" data-bs-dismiss="offcanvas" aria-label="Close"></i>
+        </div>
+        <div class="offcanvas-body pt-0">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="#features">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#case-studies">Clients</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#why">Why ViralStan?</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#testimonial">Reviews</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#faq">FAQs</a>
+                </li>
+                <li class="nav-item mt-3">
+                    <button class="btn btn-primary w-100 text-light btn-sm">Chat Now</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>

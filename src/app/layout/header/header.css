@@ -1,0 +1,207 @@
+.main-header-overlay {
+    position: absolute;
+    top: var(--lqd-top-scroll-ind-height, 0);
+    left: 0;
+    right: 0;
+    /* display: flex; */
+}
+.nav-link {
+        color: #45607c;
+}
+.main-header {
+    max-width: 100vw;
+    position: relative;
+    top: var(--lqd-top-scroll-ind-height, 0);
+    z-index: 99;
+    transition: background-color .3s;
+}
+
+.h-10 {
+    height: 10px;
+}
+
+.main-header .module-header-bottom {
+    min-height: 55px;
+}
+
+.shadow-blue {
+    box-shadow: 0 20px 50px 0 rgba(52, 99, 188, .24);
+}
+
+.rounded-10 {
+    border-radius: 10px;
+}
+
+.module-primary-nav {
+    position: static;
+    min-height: 100%;
+}
+
+@media (min-width: 992px) {
+    .navbar-collapse {
+        display: flex !important;
+        height: auto !important;
+        overflow: visible !important;
+    }
+}
+
+.navbar-collapse {
+    flex: 1 auto;
+    overflow: visible;
+}
+
+.reset-ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.main-nav {
+    --lqd-menu-items-top-padding: 10px;
+    --lqd-menu-items-bottom-padding: 10px;
+    --lqd-menu-items-left-padding: 15px;
+    --lqd-menu-items-right-padding: 15px;
+    flex: 1 auto;
+    display: flex;
+}
+
+.inline-ul>li {
+    display: inline-flex;
+    width: auto;
+}
+
+.main-nav>li,
+.main-nav>li>a {
+    display: flex;
+}
+
+.main-nav>li {
+    position: relative;
+    flex-direction: column;
+}
+
+.inline-ul>li>a {
+    display: inline-flex;
+}
+
+.main-nav>li>a {
+    z-index: 1;
+    flex: 1 auto;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;
+    padding: var(--lqd-menu-items-top-padding, 10px) var(--lqd-menu-items-right-padding, 15px) var(--lqd-menu-items-bottom-padding, 10px) var(--lqd-menu-items-left-padding, 15px);
+}
+
+.main-nav>li,
+.main-nav>li>a {
+    display: flex;
+    text-decoration: none;
+}
+
+.link-medium a {
+    font-weight: 500;
+}
+
+li:hover {
+    background: #f0f0f0 !important;
+    border-radius: 5px;
+
+}
+
+.link-13 a {
+    font-size: 13px;
+}
+
+.pos-rel,
+.relative {
+    position: relative;
+}
+
+.lqd-mobile-sec {
+    display: none;
+    pointer-events: auto;
+}
+
+/* ----------------------------- */
+/* Simplified centered responsive header
+   - Centers header container on large screens
+   - Adds horizontal (x-axis) spacing
+   - Tames excessive decorations for a cleaner look
+*/
+.main-header .statick,
+.main-header .module-header-bottom {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Align logo, nav and CTA vertically */
+.main-header .module-logo,
+.main-header .module-primary-nav,
+.main-header .pb-0\/2em {
+    display: flex;
+    align-items: center;
+}
+
+/* Slightly increase nav item spacing for readability */
+.main-nav>li>a {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+/* Tidy CTA button */
+.main-header .btn {
+    padding: .45rem .9rem;
+    border-radius: 6px;
+    box-shadow: none;
+}
+
+/* Larger screens: more horizontal breathing room */
+@media (min-width: 1200px) {
+
+    .main-header .statick,
+    .main-header .module-header-bottom {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+/* Mobile: full width, no rounded corners or shadow */
+@media (max-width: 991px) {
+
+    .main-header .statick,
+    .main-header .module-header-bottom {
+        max-width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .lqd-mobile-sec {
+        display: block;
+    }
+
+    .w-960 {
+        width: 100%;
+    }
+}
+
+.w-960 {
+    width: 960px;
+}
+
+/* Ensure header block occupies its own row */
+#site-header {
+    display: block;
+}
+
+.logo-default {
+    height: 70px;
+}

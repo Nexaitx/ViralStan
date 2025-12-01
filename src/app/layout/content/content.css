@@ -1,0 +1,47 @@
+/* Basic content styles to match the ViralStan layout */
+
+#hero { background: linear-gradient(180deg,#ffffff 0%, #fbfbfb 100%); }
+#hero .display-5 {
+	/* Fallback color for very old browsers */
+	color: #ff9b3d;
+	/* Gradient text using orange shades */
+	background: linear-gradient(180deg,
+      #f99c74 0%,
+      #ffb366 5%,
+      #ff9b3d 20%,
+      #fd7e14 45%,
+      #e66000 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	/* Non-standard but supported in some browsers */
+	color: transparent;
+	font-weight: 800;
+	font-size: 80px;
+}
+.lead {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, .7);
+}
+
+.card-title { font-weight: 600; }
+
+.main-nav .nav-link { color: #111827; }
+
+/* Offcanvas adjustments (in case of overlapping header) */
+.offcanvas-start { width: 300px; }
+
+/* Utility responsive tweaks */
+@media (max-width: 992px) {
+	#hero { padding-top: 3rem; padding-bottom: 3rem; }
+}
+
+.btn-primary { background-color: #fd7e14; border-color: #fd7e14; }
+.btn-primary:hover { filter: brightness(0.95); }
+
+.card-img-top { height: 200px; object-fit: cover; }
+
+.accordion-button:focus { box-shadow: none; }
+
