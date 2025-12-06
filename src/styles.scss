@@ -1,5 +1,5 @@
 @import "@flaticon/flaticon-uicons/css/all/all.css";
-$primary: #fd7e14;
+$primary: #c20df4;
 $secondary: #1d648b;
 
 $theme-colors: (
@@ -19,13 +19,42 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+
+button {
+    background: linear-gradient(90deg, #c20df4 -2.17%, #f46ee2 100%) !important;
+    border: 0 !important;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #c20df4 -2.17%, #f46ee2 100%) !important;
+    border: 0;
+    transform: scale(1.1);
+}
+
 .btn-outline-primary {
     color: $primary;
     border-color: $primary;
+    background: none !important;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 
     &:hover {
-        color: #fff;
-        background-color: $primary;
-        border-color: $primary;
+        color: #fff !important;
+        background: linear-gradient(90deg, #c20df4 -2.17%, #f46ee2 100%) !important;
+        border: 0 !important;
+        transform: scale(1.0);
     }
 }
+
+// .btn-outline-primary {
+//     color: #c20df4;
+//     border-color: #c20df4 !important;
+//     background: none !important;
+// }
