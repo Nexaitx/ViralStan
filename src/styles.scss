@@ -14,6 +14,9 @@ $theme-colors: (
 );
 
 @import "bootstrap/scss/bootstrap";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
     -webkit-font-smoothing: antialiased;
