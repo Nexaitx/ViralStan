@@ -119,6 +119,15 @@ export class MainLayout {
     this.stopAutoPlay();
   }
 
+  openWhatsApp() {
+  const phoneNumber = '916284500902'; // country code + number
+  const message = 'Hi, ViralStan! I want to know more about your services';
+
+  const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  window.open(url, '_blank');
+}
+
+
   nextVideo() {
     this.currentVideoIndex = (this.currentVideoIndex + 1) % this.videoFiles.length;
   }
