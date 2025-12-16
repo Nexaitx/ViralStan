@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { 
-  LucideAngularModule, 
-  Check, X, Eye, Zap, Sparkles, TrendingUp, Users, Clock 
+import {
+  LucideAngularModule,
+  Check, X, Eye, Zap, Sparkles, TrendingUp, Users, Clock
 } from 'lucide-angular';
 
 @Component({
@@ -12,7 +12,7 @@ import {
   styleUrl: './main-layout.css',
 })
 export class MainLayout {
-CheckIcon = Check;
+  CheckIcon = Check;
   XIcon = X;
   EyeIcon = Eye;
   ZapIcon = Zap;
@@ -22,7 +22,22 @@ CheckIcon = Check;
   ClockIcon = Clock;
 
   // Data Arrays
-  brands = ["Brand 1", "Brand 2", "Brand 3", "Brand 4", "Brand 5"];
+  videoPath: string = 'assets/brands/'; // Adjust if needed, based on where your assets folder is accessed
+  brandVideoFiles: string[] = [
+    'Brand Video 01.mp4',
+    // 'Brand Video 02.mp4',
+    // 'Brand Video 03.mp4',
+    // 'Brand Video 04.mp4',
+    'Brand Video 05.mp4'
+  ];
+  currentBrandVideoIndex: number = 0;
+
+  // Optional: Auto-play setup
+  private autoPlayInterval: any;
+  private intervalDuration: number = 7000; // 7 seconds per video
+
+  // Brands for the header section
+  brands: string[] = ['Brand A', 'Brand B', 'Brand C', 'Brand D', 'Brand E'];
 
   sparkFeatures = [
     "1 x Hero CGI/VFX Video (30-45 Seconds).",
@@ -81,5 +96,64 @@ CheckIcon = Check;
     "Trend forecasting included",
     "Culture-shifting originals",
   ];
+
+  public videoFiles = [
+    'Viralstan Homepage Video 001.mp4',
+    'Viralstan Homepage Video 002.mp4',
+    'Viralstan Homepage Video 003.mp4',
+    'Viralstan Homepage Video 004.mp4',
+  ];
+  public currentVideoIndex = 0;
+
+  nextVideo() {
+    this.currentVideoIndex = (this.currentVideoIndex + 1) % this.videoFiles.length;
+  }
+
+  // Method to switch to the previous video
+  prevVideo() {
+    this.currentVideoIndex = (this.currentVideoIndex - 1 + this.videoFiles.length) % this.videoFiles.length;
+  }
+
+  ngOnInit() {
+    setInterval(() => {
+      this.nextVideo();
+    }, 1000);
+    this.startAutoPlay();
+  }
+
+  ngOnDestroy() {
+    this.stopAutoPlay();
+  }
+
+  nextBrandVideo() {
+    this.stopAutoPlay();
+    this.currentBrandVideoIndex = (this.currentBrandVideoIndex + 1) % this.videoFiles.length;
+    this.startAutoPlay();
+  }
+
+  prevBrandVideo() {
+    this.stopAutoPlay();
+    this.currentBrandVideoIndex = (this.currentBrandVideoIndex - 1 + this.videoFiles.length) % this.videoFiles.length;
+    this.startAutoPlay();
+  }
+
+  goToVideo(index: number) {
+    this.stopAutoPlay();
+    this.currentBrandVideoIndex = index;
+    this.startAutoPlay();
+  }
+  
+  startAutoPlay() {
+    this.stopAutoPlay();
+    this.autoPlayInterval = setInterval(() => {
+      this.currentBrandVideoIndex = (this.currentBrandVideoIndex + 1) % this.videoFiles.length;
+    }, this.intervalDuration);
+  }
+
+  stopAutoPlay() {
+    if (this.autoPlayInterval) {
+      clearInterval(this.autoPlayInterval);
+    }
+  }
 
 }
