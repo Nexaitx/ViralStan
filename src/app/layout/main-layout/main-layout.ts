@@ -7,7 +7,10 @@ import {
 
 @Component({
   selector: 'app-main-layout',
-  imports: [CommonModule, LucideAngularModule],
+  imports: [
+    CommonModule,
+    LucideAngularModule
+  ],
   templateUrl: './main-layout.html',
   styleUrl: './main-layout.css',
 })
@@ -21,18 +24,22 @@ export class MainLayout {
   UsersIcon = Users;
   ClockIcon = Clock;
 
-  // Data Arrays
-  videoPath: string = 'assets/brands/'; // Adjust if needed, based on where your assets folder is accessed
+  videoPath: string = 'assets/brands/';
   brandVideoFiles: string[] = [
-    'Brand Video 01.mp4',
-    // 'Brand Video 02.mp4',
-    // 'Brand Video 03.mp4',
-    // 'Brand Video 04.mp4',
-    'Brand Video 05.mp4'
+    'BrandVideo01.mp4',
+    // 'BrandVideo02.mp4',
+    // 'BrandVideo03.mp4',
+    // 'BrandVideo04.mp4',
+    'BrandVideo05.mp4'
+  ];
+  public videoFiles = [
+    'ViralstanHomepageVideo001.mp4',
+    'ViralstanHomepageVideo002.mp4',
+    'ViralstanHomepageVideo003.mp4',
+    'ViralstanHomepageVideo004.mp4',
   ];
   currentBrandVideoIndex: number = 0;
 
-  // Optional: Auto-play setup
   private autoPlayInterval: any;
   private intervalDuration: number = 7000; // 7 seconds per video
 
@@ -97,13 +104,20 @@ export class MainLayout {
     "Culture-shifting originals",
   ];
 
-  public videoFiles = [
-    'Viralstan Homepage Video 001.mp4',
-    'Viralstan Homepage Video 002.mp4',
-    'Viralstan Homepage Video 003.mp4',
-    'Viralstan Homepage Video 004.mp4',
-  ];
+
   public currentVideoIndex = 0;
+
+
+  ngOnInit() {
+    setInterval(() => {
+      this.nextVideo();
+    }, 7000);
+    this.startAutoPlay();
+  }
+
+  ngOnDestroy() {
+    this.stopAutoPlay();
+  }
 
   nextVideo() {
     this.currentVideoIndex = (this.currentVideoIndex + 1) % this.videoFiles.length;
@@ -114,26 +128,15 @@ export class MainLayout {
     this.currentVideoIndex = (this.currentVideoIndex - 1 + this.videoFiles.length) % this.videoFiles.length;
   }
 
-  ngOnInit() {
-    setInterval(() => {
-      this.nextVideo();
-    }, 1000);
-    this.startAutoPlay();
-  }
-
-  ngOnDestroy() {
-    this.stopAutoPlay();
-  }
-
   nextBrandVideo() {
     this.stopAutoPlay();
-    this.currentBrandVideoIndex = (this.currentBrandVideoIndex + 1) % this.videoFiles.length;
+    this.currentBrandVideoIndex = (this.currentBrandVideoIndex + 1) % this.brandVideoFiles.length;
     this.startAutoPlay();
   }
 
   prevBrandVideo() {
     this.stopAutoPlay();
-    this.currentBrandVideoIndex = (this.currentBrandVideoIndex - 1 + this.videoFiles.length) % this.videoFiles.length;
+    this.currentBrandVideoIndex = (this.currentBrandVideoIndex - 1 + this.brandVideoFiles.length) % this.brandVideoFiles.length;
     this.startAutoPlay();
   }
 
@@ -142,11 +145,12 @@ export class MainLayout {
     this.currentBrandVideoIndex = index;
     this.startAutoPlay();
   }
-  
+
   startAutoPlay() {
+    console.log('Starting autoplay');
     this.stopAutoPlay();
     this.autoPlayInterval = setInterval(() => {
-      this.currentBrandVideoIndex = (this.currentBrandVideoIndex + 1) % this.videoFiles.length;
+      this.currentBrandVideoIndex = (this.currentBrandVideoIndex + 1) % this.brandVideoFiles.length;
     }, this.intervalDuration);
   }
 
