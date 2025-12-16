@@ -25,29 +25,39 @@ CheckIcon = Check;
   brands = ["Brand 1", "Brand 2", "Brand 3", "Brand 4", "Brand 5"];
 
   sparkFeatures = [
-    "2-3 VFX Reels/Month",
-    "Basic 3D Product Renders",
-    "48hr Turnaround",
-    "Trend Alerts",
-    "WhatsApp Support",
+    "1 x Hero CGI/VFX Video (30-45 Seconds).",
+    "2 x High-End 3D Product Reveal / Fluid Simulations for Reel/ Story.",
+    "Professional Color Grading & Sound Design.",
+    "Hyper-Realistic 3D Modeling & Texturing",
+    "Concept Storyboard & Pre-Visualization",
+    "Advanced Sound Design & SFX Sync",
+    "Multi-Format Delivery",
+    "Full Commercial Usage Rights",
+    "2 Rounds of Precision Revisions"
   ];
 
   surgeFeatures = [
-    "6-8 VFX Reels/Month",
-    "Advanced CGI Sequences",
-    "24hr Rush Available",
-    "Viral Strategy Sessions",
-    "Dedicated Slack Channel",
-    "Analytics Dashboard",
+    "Professional Crew & Talent - 1 Model + 1 Cinematographer included.",
+    "4 x High-Fashion Reels (Post-Production) with VFX/Motion graphics.",
+    "Comprehensive Pre-Production",
+    "Studio Rental & Set Design – Includes background setup and lighting.",
+    "Bonus: 10 High-Res Professionally retouched Photos for website/catalogue",
+    "Creative Direction & On-Set Supervision",
+    "Cinematic Color Grading",
+    "Licensed Trendy Audio Selection – Copyright-safe music",
+    "Full Rights Management"
   ];
 
   empireFeatures = [
-    "Unlimited VFX Content",
-    "Full Cinematic Productions",
-    "Same-Day Turnaround",
-    "White-Glove Creative Direction",
-    "Dedicated Team",
-    "Priority Everything",
+    "Monthly \"Viral Strategy\" Session for Content Calendar",
+    "2 x Premium VFX/CGI Reels",
+    "6 x Fast-Paced Motion Graphic Edits",
+    "Weekly Trend Alerts",
+    "Professional Sound Design & Mixing",
+    "Dedicated Account Manager",
+    "24-Hour Express Turnaround",
+    "Monthly Analytics Review",
+    "Source File Archival"
   ];
 
   standardAgencyFeatures = [
