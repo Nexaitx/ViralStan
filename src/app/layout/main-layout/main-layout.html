@@ -5,29 +5,17 @@
 
     <div class="absolute inset-0 overflow-hidden">
 
-      <video width="320" height="240" autoplay loop muted playsinline *ngFor="let video of videoFiles; let i = index"
-        [class.hidden]="i !== currentVideoIndex" [class.block]="i === currentVideoIndex"
+      <!-- <video width="320" height="240" autoplay loop muted playsinline
         class="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000">
-        <source [src]="'assets/banner/' + video" type="video/mp4">
+        <source src="../../../assets/banner/banner-bg.mp4" type="video/mp4">
         <source src="movie.ogg" type="video/ogg">
         Your browser does not support the video tag.
+      </video> -->
+      <video autoplay width="320" height="240" [muted]="true" playsinline loop class="bg-video w-full h-full object-cover transition-opacity">
+        <source src="../../../assets/banner/banner-bg.mp4" type="video/mp4">
       </video>
 
       <div class="absolute inset-0 bg-black opacity-30"></div>
-      <button (click)="prevVideo()"
-        class="absolute left-4 top-1/2 z-20 p-3 rounded-full bg-white/20 hover:bg-white/40 text-white transition-colors hidden sm:block">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M15 18l-6-6 6-6" />
-        </svg>
-      </button>
-      <button (click)="nextVideo()"
-        class="absolute right-4 top-1/2 z-20 p-3 rounded-full bg-white/20 hover:bg-white/40 text-white transition-colors hidden sm:block">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M9 18l6-6-6-6" />
-        </svg>
-      </button>
 
     </div>
 
@@ -76,7 +64,7 @@
 
       <div class="aspect-video w-full relative">
 
-        <video width="320" height="100" autoplay loop muted playsinline
+        <video width="320" height="100" autoplay [muted]="true" playsinline loop
           *ngFor="let video of brandVideoFiles; let i = index" [class.opacity-100]="i === currentBrandVideoIndex"
           [class.opacity-0]="i !== currentBrandVideoIndex"
           class="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000">
