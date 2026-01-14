@@ -1,0 +1,257 @@
+<!-- viralstan-landing.component.html -->
+<!-- Copy this entire file to your Angular project -->
+<app-header></app-header>
+<div class="viralstan-landing mt-5 pt-4">
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <!-- Video Background -->
+    <div class="video-background">
+      <div class="video-overlay-gradient"></div>
+      <video autoplay loop muted playsinline class="hero-video">
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-abstract-blue-and-purple-neon-lights-29660-large.mp4" type="video/mp4">
+      </video>
+      <div class="glitch-overlay"></div>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="hero-content">
+      <div class="container">
+        <h1 class="hero-title">
+          <span class="hero-title-gradient">STOP BURNING CASH.</span>
+          <br>
+          <span class="hero-title-white">START PRINTING MONEY.</span>
+        </h1>
+        <p class="hero-subtitle">
+          The creative-first performance engine that turns your ad spend into revenue machines.
+        </p>
+        <div class="hero-cta-buttons">
+          <button class="btn btn-primary" (click)="openAuditForm()">
+            GET YOUR FREE AUDIT
+          </button>
+          <button class="btn btn-outline" (click)="scrollToPlans()">
+            SEE THE PLANS
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem/Agitation Section -->
+  <section class="problem-section">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="text-red">WHY YOUR ADS ARE</span>
+        <span class="text-white"> FLOPPING</span>
+      </h2>
+      <div class="problem-grid">
+        <div class="problem-card">
+          <div class="problem-card-content">
+            <svg class="problem-icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path>
+            </svg>
+            <h3 class="problem-card-title">Creative Fatigue</h3>
+            <p class="problem-card-description">
+              Your audience has seen the same boring angles 1000x. They scroll past in 0.3 seconds.
+            </p>
+          </div>
+        </div>
+
+        <div class="problem-card">
+          <div class="problem-card-content">
+            <svg class="problem-icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path>
+              <line x1="12" y1="9" x2="12" y2="13"></line>
+              <line x1="12" y1="17" x2="12.01" y2="17"></line>
+            </svg>
+            <h3 class="problem-card-title">The Agency Trap</h3>
+            <p class="problem-card-description">
+              Cookie-cutter templates from offshore teams who've never sold anything in their lives.
+            </p>
+          </div>
+        </div>
+
+        <div class="problem-card">
+          <div class="problem-card-content">
+            <svg class="problem-icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="2" x2="12" y2="22"></line>
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+            </svg>
+            <h3 class="problem-card-title">The Result</h3>
+            <p class="problem-card-description">
+              Bleeding cash on ads that don't convert. Zero momentum. Same mediocre ROAS every month.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solution Process Section -->
+  <section class="solution-section">
+    <div class="container">
+      <h2 class="section-title">
+        THE <span class="text-gradient">'CREATIVE-FIRST'</span>
+        <br>PERFORMANCE ENGINE
+      </h2>
+      <p class="solution-subtitle">
+        We don't just run ads. We engineer viral creative systems that print money.
+      </p>
+
+      <div class="solution-grid">
+        <div class="solution-card solution-card-emerald">
+          <div class="solution-card-content">
+            <div class="solution-icon solution-icon-emerald">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+            </div>
+            <h3 class="solution-card-title">Thumb-Stopping VFX</h3>
+            <p class="solution-card-description">
+              Hollywood-grade motion graphics, 3D renders, and scroll-stopping visuals that make your audience STOP and watch.
+            </p>
+          </div>
+        </div>
+
+        <div class="solution-card solution-card-cyan">
+          <div class="solution-card-content">
+            <div class="solution-icon solution-icon-cyan">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <circle cx="12" cy="12" r="6"></circle>
+                <circle cx="12" cy="12" r="2"></circle>
+              </svg>
+            </div>
+            <h3 class="solution-card-title">Ruthless Testing</h3>
+            <p class="solution-card-description">
+              We launch 50+ variants per month. Kill losers fast. Scale winners aggressively. Data-driven creative iteration.
+            </p>
+          </div>
+        </div>
+
+        <div class="solution-card solution-card-purple">
+          <div class="solution-card-content">
+            <div class="solution-icon solution-icon-purple">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                <polyline points="16 7 22 7 22 13"></polyline>
+              </svg>
+            </div>
+            <h3 class="solution-card-title">Full-Funnel Domination</h3>
+            <p class="solution-card-description">
+              From cold traffic hooks to retargeting sequences. Every touchpoint optimized for maximum conversion velocity.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Grid Section -->
+  <section class="portfolio-section">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="text-white">CREATIVE</span>
+        <span class="text-gradient"> ARSENAL</span>
+      </h2>
+      <div class="portfolio-grid">
+        <div class="portfolio-item" *ngFor="let item of portfolioItems">
+          <div class="portfolio-item-overlay"></div>
+          <div class="portfolio-item-content">
+            <div class="portfolio-item-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+            </div>
+            <p class="portfolio-item-label">Video Ad #{{ item }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="pricing-section" id="pricing-section">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="text-white">PICK YOUR</span>
+        <span class="text-gradient"> WEAPON</span>
+      </h2>
+      <p class="pricing-subtitle">
+        No retainers. No BS. Just results-driven creative firepower.
+      </p>
+
+      <div class="pricing-grid">
+        <div class="pricing-card"
+             *ngFor="let tier of pricingTiers"
+             [class.pricing-card-highlighted]="tier.highlighted">
+          <div class="pricing-badge" *ngIf="tier.highlighted">
+            MOST POPULAR
+          </div>
+          <div class="pricing-card-header">
+            <h3 class="pricing-card-title">{{ tier.name }}</h3>
+            <div class="pricing-card-price" [class.text-emerald]="tier.accentColor === 'emerald'" [class.text-cyan]="tier.accentColor === 'cyan'">
+              {{ tier.price }}
+            </div>
+            <p class="pricing-card-period">{{ tier.period }}</p>
+          </div>
+          <div class="pricing-card-content">
+            <div class="pricing-features">
+              <div class="pricing-feature" *ngFor="let feature of tier.features">
+                <svg class="pricing-feature-icon" [class.text-emerald]="tier.accentColor === 'emerald'" [class.text-cyan]="tier.accentColor === 'cyan'" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span class="pricing-feature-text">{{ feature }}</span>
+              </div>
+            </div>
+            <button class="btn pricing-btn" [ngClass]="tier.buttonClass">
+              {{ tier.buttonText }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="text-white">FAQ</span>
+      </h2>
+      <div class="faq-accordion">
+        <div class="faq-item" *ngFor="let faq of faqItems; let i = index">
+          <button class="faq-trigger" (click)="toggleFaq(i)">
+            <span class="faq-question">{{ faq.question }}</span>
+            <svg class="faq-icon" [class.faq-icon-open]="faq.expanded" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="faq-content" [class.faq-content-open]="faq.expanded">
+            <p class="faq-answer">{{ faq.answer }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer CTA Section -->
+  <section class="footer-cta-section">
+    <div class="footer-cta-overlay"></div>
+    <div class="container">
+      <h2 class="footer-cta-title">
+        <span class="text-gradient">READY TO SCALE?</span>
+      </h2>
+      <p class="footer-cta-subtitle">
+        Stop losing money on boring ads. Let's build your creative arsenal and dominate your market.
+      </p>
+      <button class="btn btn-primary btn-large" (click)="openStrategyCall()">
+        BOOK A STRATEGY CALL
+      </button>
+    </div>
+  </section>
+
+</div>
+
+<app-footer></app-footer>
+<router-outlet></router-outlet>

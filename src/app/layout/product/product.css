@@ -1,0 +1,267 @@
+/* Base Resets & Fonts */
+:host {
+  display: block;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  background: #0F0F14;
+  color: #F8F9FC;
+  overflow-x: hidden;
+}
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 0.3; }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-pulse-slow-delayed {
+  animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  animation-delay: 1s;
+}
+
+.animate-bounce-slow {
+  animation: bounce 2s infinite;
+}
+
+.fade-in-up {
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(90deg, #6A00FF 0%, #00D9FF 50%, #6A00FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Card Styles */
+.card {
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+/* Button Styles */
+.btn {
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #6A00FF 0%, #00D9FF 100%);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(106, 0, 255, 0.5);
+}
+
+.btn-outline {
+  border: 2px solid #6A00FF;
+  color: #6A00FF;
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: #6A00FF;
+  color: white;
+}
+
+.btn-gold {
+  background: #FFD700;
+  color: #000;
+}
+
+.btn-gold:hover {
+  background: #E5C100;
+}
+
+.btn-white {
+  background: white;
+  color: #6A00FF;
+}
+
+.btn-white:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.btn-whatsapp {
+  background: #25D366;
+  color: white;
+  border-radius: 50px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.btn-whatsapp:hover {
+  background: #20BA5A;
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(37, 211, 102, 0.5);
+}
+
+/* Badge Styles */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* Grid Pattern Background */
+.grid-pattern {
+  background-image:
+      linear-gradient(rgba(106, 0, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(106, 0, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* Glow Effects */
+.glow-purple {
+  box-shadow: 0 0 30px rgba(106, 0, 255, 0.3);
+}
+
+.glow-purple:hover {
+  box-shadow: 0 0 40px rgba(106, 0, 255, 0.5);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 20px rgba(0, 217, 255, 0.3);
+}
+
+.glow-cyan:hover {
+  box-shadow: 0 0 30px rgba(0, 217, 255, 0.5);
+}
+
+.glow-gold {
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
+}
+
+/* Container */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Section Spacing */
+.section {
+  padding: 5rem 0;
+}
+
+/* Floating WhatsApp Button */
+.floating-whatsapp {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000;
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite;
+}
+
+.scroll-indicator-inner {
+  width: 24px;
+  height: 40px;
+  border: 2px solid #6A00FF;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  padding-top: 8px;
+}
+
+.scroll-dot {
+  width: 6px;
+  height: 12px;
+  background: #6A00FF;
+  border-radius: 3px;
+  animation: pulse 2s infinite;
+}
+
+/* Timeline Connector */
+.timeline-connector {
+  width: 2px;
+  height: 64px;
+  background: linear-gradient(180deg, #6A00FF 0%, #00D9FF 100%);
+  margin-left: 23px;
+  margin-top: 8px;
+}
+
+/* Step Number Circle */
+.step-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6A00FF 0%, #00D9FF 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.125rem;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.step-circle:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section {
+      padding: 3rem 0;
+  }
+
+  h1 {
+      font-size: 2.5rem !important;
+  }
+
+  h2 {
+      font-size: 2rem !important;
+  }
+
+  .floating-whatsapp span {
+      display: none;
+  }
+}

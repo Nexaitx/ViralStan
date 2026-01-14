@@ -1,0 +1,141 @@
+<app-header></app-header>
+
+
+<div class="bg-animated">
+  <div class="gradient-orb orb-1" #orb1></div>
+  <div class="gradient-orb orb-2" #orb2></div>
+  <div class="gradient-orb orb-3" #orb3></div>
+</div>
+
+<!-- <nav>
+  <div class="nav-container">
+    <div class="logo">Viralstan</div>
+    <a (click)="scrollTo('contact')" class="nav-cta">Get Started</a>
+  </div>
+</nav> -->
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-tagline">Where Attention Becomes Influence. Influence Becomes Revenue.</div>
+    <h1 class="hero-title">People Don't Buy What They Don't Notice.</h1>
+    <h2 class="hero-subtitle">We Make Brands Impossible to Ignore.</h2>
+    <p class="hero-description">
+      In a world of infinite scrolling and shrinking attention spans,
+      Viralstan helps brands capture attention, spark emotion, and convert eyeballs into customers.
+      <br><br>
+      From social media growth to performance ads, cinematic CGI to music distribution —
+      we engineer virality with strategy, creativity, and data.
+    </p>
+    <div class="hero-features">
+      <div class="hero-feature">🚀 Build Attention.</div>
+      <div class="hero-feature">📈 Drive Growth.</div>
+      <div class="hero-feature">🎯 Scale Faster.</div>
+    </div>
+    <div class="cta-buttons">
+      <button (click)="scrollTo('contact')" class="btn btn-primary">Book a Free Strategy Call</button>
+      <button (click)="scrollTo('services')" class="btn btn-secondary">Explore Our Services</button>
+    </div>
+  </div>
+</section>
+
+<section id="why" class="fade-in">
+  <div class="container">
+    <div class="why-content">
+      <div class="section-header">
+        <h2 class="section-title">Why Viralstan?</h2>
+        <p class="section-subtitle text-light">Because "Posting Content" Is Not a Strategy.</p>
+      </div>
+      <div class="why-text text-light">
+        Anyone can post.<br>
+        Anyone can boost ads.<br>
+        <strong>Very few know how to win attention consistently.</strong>
+      </div>
+      <p class="hero-description">At Viralstan, we blend:</p>
+      <div class="why-pillars">
+        <div class="pillar text-light">
+          <h3>🧠 Psychology of Attention</h3>
+          <p>We understand what makes people stop, watch, and click.</p>
+        </div>
+        <div class="pillar text-light">
+          <h3>🎬 Creative Storytelling</h3>
+          <p>Every piece of content tells a story that resonates.</p>
+        </div>
+        <div class="pillar text-light">
+          <h3>📊 Performance-Driven Execution</h3>
+          <p>Data-backed decisions that drive real results.</p>
+        </div>
+      </div>
+      <div class="why-conclusion text-light">
+        So your brand doesn't just exist online —<br>
+        <span style="color: var(--secondary);">it dominates screens.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="fade-in">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Our Core Services</h2>
+      <p class="section-subtitle text-light">Everything You Need to Grow in the Attention Economy</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card" *ngFor="let service of services; let i = index">
+        <div class="service-number text-light">0{{i + 1}}</div>
+        <h3 class="service-title text-light">{{service.title}}</h3>
+        <div class="service-tagline text-light">{{service.tagline}}</div>
+        <p class="service-description text-light" [innerHTML]="service.desc"></p>
+        <ul class="service-features text-light">
+          <li *ngFor="let feature of service.features">{{feature}}</li>
+        </ul>
+        <button (click)="scrollTo('contact')" class="service-cta">{{service.ctaText}} →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how" class="fade-in">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">How We Work</h2>
+      <p class="section-subtitle text-light">A System Built for Growth</p>
+    </div>
+    <div class="how-steps">
+      <div class="step" *ngFor="let step of steps">
+        <div class="step-number">{{step.icon}}</div>
+        <h3 class="step-title">{{step.title}}</h3>
+        <p class="step-description">{{step.desc}}</p>
+      </div>
+    </div>
+    <div class="why-content" style="margin-top: 5rem;">
+      <h3 class="section-title" style="font-size: 2.5rem;">Who We Work With</h3>
+      <div class="clients-list">
+        <div class="client-badge text-light" *ngFor="let client of clients">✔ {{client}}</div>
+      </div>
+      <p class="clients-tagline text-light">If attention matters to your business — we're your team.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="fade-in">
+  <div class="container">
+    <div class="final-cta">
+      <h2 class="final-cta-title text-light">Your Audience Is Scrolling Right Now.<br>Will They Stop for You?</h2>
+      <p class="final-cta-text text-light">
+        If you're serious about growth, visibility, and results —<br>
+        Viralstan is ready.
+      </p>
+      <div class="cta-buttons">
+        <button (click)="scrollTo('contact')" class="btn btn-primary">Get a Free Strategy Call</button>
+        <button (click)="scrollTo('services')" class="btn btn-secondary">View Our Services</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">Viralstan</div>
+  <div class="footer-tagline text-light">Built for the Internet. Engineered for Attention.</div>
+</footer>
+
+<app-footer></app-footer>

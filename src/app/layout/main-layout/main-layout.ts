@@ -1,16 +1,22 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterOutlet } from '@angular/router';
 import {
   LucideAngularModule,
   Check, X, Eye, Zap, Sparkles, TrendingUp, Users, Clock
 } from 'lucide-angular';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { Header } from '../header/header';
+import { Footer } from '../footer/footer';
 
 @Component({
   selector: 'app-main-layout',
   imports: [
     CommonModule,
-    LucideAngularModule
+    LucideAngularModule,
+    RouterOutlet,
+    Header,
+    Footer
   ],
   templateUrl: './main-layout.html',
   styleUrl: './main-layout.css',
