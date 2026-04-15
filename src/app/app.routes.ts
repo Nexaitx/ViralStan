@@ -4,6 +4,7 @@ import { AdCampaign } from './layout/ad-campaign/ad-campaign';
 import { Product } from './layout/product/product';
 import { Home } from './layout/home/home';
 import { LandingUi } from './layout/landing-ui/landing-ui';
+import { MetaGoogleAds } from './layout/meta-google-ads/meta-google-ads';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'index', pathMatch: 'full' },
@@ -12,6 +13,7 @@ export const routes: Routes = [
     { path: 'product', component: Product },
     { path: 'ad-campaign', component: AdCampaign },
     { path: 'vfx', component: MainLayout },
+    { path: 'meta-google-ads', component: MetaGoogleAds },
 
     { path: '**', redirectTo: 'home' }
 ];
